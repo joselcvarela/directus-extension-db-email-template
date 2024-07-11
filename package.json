@@ -2,7 +2,7 @@
   "name": "directus-extension-db-email-template",
   "description": "Directus extension to host email templates on database so can be edited via Directus App/Editor.",
   "icon": "extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "José Varela",
     "url": "https://joselcvarela.com"
@@ -23,7 +23,10 @@
     "type": "hook",
     "path": "dist/index.js",
     "source": "src/index.ts",
-    "host": "^10.10.0"
+    "host": "^10.10.0",
+    "sandbox": {
+      "enabled": true
+    }
   },
   "scripts": {
     "build": "directus-extension build",
@@ -38,8 +41,5 @@
   "dependencies": {
     "@directus/env": "^1.3.0",
     "@directus/types": "^11.2.0"
-  },
-  "sandbox": {
-    "enabled": true
   }
 }
